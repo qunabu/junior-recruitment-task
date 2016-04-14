@@ -1,1 +1,1 @@
-W tym katalogu mają znaleźć się pliki frontendu
+W tym katalogu mają znaleźć się pliki dotyczące frontend'u
