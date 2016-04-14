@@ -36,6 +36,6 @@ Aplikacja ma przygotowany layout graficzny
   - `Frontend` ma być dostępny w katalogu `to-do-list/frontend` np `http://localhost/to-do-list/frontend`.
   - `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`.
   - Kod ma być **czytelny i opisany** przez komentarze, JavaScript zgodnie z [documentationjs](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md), PHP zgodnie z [phpdoc](https://www.phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html) a inne językie zgodnie z wybraną specyfikacją. 
-  - aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc. 
+  - Aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc.
   
 ## Powodzenia
