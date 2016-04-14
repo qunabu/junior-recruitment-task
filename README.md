@@ -10,6 +10,7 @@ Aplikacja wyświetla listę zadań do wykonania. Zadania podzielone są na *wyko
   - Pod listą zadań zawsze wyświetla się pole z możliwością dodania nowego zadania. Nowe zadanie jest zawsze *do zrobienia*
   - Po dodaniu nowego zadania, dodawane jest ono nad polem dodawana nowego zadania. Pole z możliwością dodania nowego zadania jest zawsze na samym dole listy. 
   - Nie można dodać zadania bez wpisania tytułu (walidacja powinna być i po stronie `frontend'u` i `backend'u`)
+  - Każde zadanie można usunąć poprzez kliknięcie w ikonę kosza.
   - **Opcjonalnie** można zmieniać kolejność zadań poprzez przenoszenie ich *drag & drop*
   
 ## Frontend
