@@ -1,0 +1,195 @@
+{\rtf1\ansi\ansicpg1250\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red204\green120\blue50;\red43\green43\blue43;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16000\viewh11320\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf2 \cb3 # Zadanie dla Junior Developera\
+\
+Realizacja prostej listy ToDo (lista zada\uc0\u324  do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umo\u380 liwia dodawanie, przegl\u261 danie i oznaczanie jako wykonane r\'f3\u380 nych zada\u324 , kt\'f3re zapisywane b\u281 d\u261  w bazie danych `SQLite`.\
+Dla backendu proponujemy prosty skrypt w PHP (przyk\uc0\u322 ad http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/).\
+\
+## Funkcjonalno\uc0\u347 \u263  \
+Aplikacja wy\uc0\u347 wietla list\u281  zada\u324  do wykonania. Zadania podzielone s\u261  na *wykonane* oraz *do zrobienia*. \
+  - Zadania *wykonane* s\uc0\u261  przekre\u347 lone i s\u261  oznaczone kolorem (`#9eb2c0`) i zaznaczonym polem wyboru po lewej stronie.  \
+  - Zadania *do zrobienia* s\uc0\u261  oznaczone kolorem (`#2e3641`) i niezaznaczonym polem wyboru po lewej stronie. \
+  - Pod list\uc0\u261  zada\u324  zawsze wy\u347 wietla si\u281  pole z mo\u380 liwo\u347 ci\u261  dodania nowego zadania. Nowe zadanie jest zawsze *do zrobienia*\
+  - Po dodaniu nowego zadania, dodawane jest ono nad polem dodawana nowego zadania. Pole z mo\uc0\u380 liwo\u347 ci\u261  dodania nowego zadania jest zawsze na samym dole listy. \
+  - Nie mo\uc0\u380 na doda\u263  zadania bez wpisania tytu\u322 u (walidacja powinna by\u263  i po stronie `frontend'u` i `backend'u`)\
+  - **Opcjonalnie** mo\uc0\u380 na zmienia\u263  kolejno\u347 \u263  zada\u324  poprzez przenoszenie ich *drag & drop*\
+  \
+## Frontend\
+Aplikacja ma przygotowany layout graficzny\
+\
+![Layout Aplikacji](https://www.dropbox.com/s/bpah0svytmw78ie/to-do-list.png?dl=1&a) \
+\
+  - W katalogu `assets` jest plik Photoshop `PSD` gotowy do poci\uc0\u281 cia do szablonu. \
+  - Aplikacja ma by\uc0\u263  przygotowana jak `Single Page Application`, jeden plik HTML5 wraz z jednym g\u322 \'f3wnym szablonem `CSS` i jednym plikiem `JavaScript`. \
+  - Komunikacja mi\uc0\u281 dzy Frontendem a Backendem ma by\u263  dokonywana w tle, bez prze\u322 adowywana strony, najlepiej z wykorzystaniem `AJAX`. \
+  - Aplikacja powinna by\uc0\u263  ostylowana przez `preprocess CSS`, preferujemy `SCSS` i `compass`.  \
+  - Logika aplikacji powinna by\uc0\u263  podzielona wed\u322 ug wzorca `Model-View-Controller`\
+  - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub u\uc0\u380 ycie minimalnej ilo\u347 ci. Preferujemy bibliotek\u281  `Vanilla JS`\
+  \
+## Backend \
+  - Nale\uc0\u380 y stworzy\u263  strukturt\u281  bazy danych \
+  - Nale\uc0\u380 y stworzy\u263  plik do kt\'f3rego b\u281 dzie odwo\u322 ywa\u322  si\u281  frontend kt\'f3ry b\u281 dzie wykonywa\u322  `CRUD` (create, read, update and delete) dla zada \
+\
+Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.\
+\
+  - Type some Markdown on the left\
+  - See HTML in the right\
+  - Magic\
+\
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]\
+\
+> The overriding design goal for Markdown's\
+> formatting syntax is to make it as readable\
+> as possible. The idea is that a\
+> Markdown-formatted document should be\
+> publishable as-is, as plain text, without\
+> looking like it's been marked up with tags\
+> or formatting instructions.\
+\
+This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.\
+\
+### Version\
+3.2.7\
+\
+### Tech\
+\
+Dillinger uses a number of open source projects to work properly:\
+\
+* [AngularJS] - HTML enhanced for web apps!\
+* [Ace Editor] - awesome web-based text editor\
+* [Marked] - a super fast port of Markdown to JavaScript\
+* [Twitter Bootstrap] - great UI boilerplate for modern web apps\
+* [node.js] - evented I/O for the backend\
+* [Express] - fast node.js network app framework [@tjholowaychuk]\
+* [Gulp] - the streaming build system\
+* [keymaster.js] - awesome keyboard handler lib by [@thomasfuchs]\
+* [jQuery] - duh\
+\
+And of course Dillinger itself is open source with a [public repository][dill]\
+ on GitHub.\
+\
+### Installation\
+\
+You need Gulp installed globally:\
+\
+```sh\
+$ npm i -g gulp\
+```\
+\
+```sh\
+$ git clone [git-repo-url] dillinger\
+$ cd dillinger\
+$ npm i -d\
+$ gulp build --prod\
+$ NODE_ENV=production node app\
+```\
+\
+### Plugins\
+\
+Dillinger is currently extended with the following plugins\
+\
+* Dropbox\
+* Github\
+* Google Drive\
+* OneDrive\
+\
+Readmes, how to use them in your own application can be found here:\
+\
+* [plugins/dropbox/README.md] [PlDb]\
+* [plugins/github/README.md] [PlGh]\
+* [plugins/googledrive/README.md] [PlGd]\
+* [plugins/onedrive/README.md] [PlOd]\
+\
+### Development\
+\
+Want to contribute? Great!\
+\
+Dillinger uses Gulp + Webpack for fast developing.\
+Make a change in your file and instantanously see your updates!\
+\
+Open your favorite Terminal and run these commands.\
+\
+First Tab:\
+```sh\
+$ node app\
+```\
+\
+Second Tab:\
+```sh\
+$ gulp watch\
+```\
+\
+(optional) Third:\
+```sh\
+$ karma start\
+```\
+\
+### Docker\
+Dillinger is very easy to install and deploy in a Docker container.\
+\
+By default, the Docker will expose port 80, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image. \
+\
+```sh\
+cd dillinger\
+docker build -t <youruser>/dillinger:latest .\
+```\
+This will create the dillinger image and pull in the necessary dependencies. Once done, run the Docker and map the port to whatever you wish on your host. In this example, we simply map port 80 of the host to port 80 of the Docker (or whatever port was exposed in the Dockerfile):\
+\
+```sh\
+docker run -d -p 80:80 --restart="always" <youruser>/dillinger:latest\
+```\
+\
+Verify the deployment by navigating to your server address in your preferred browser.\
+\
+### N|Solid and NGINX\
+\
+More details coming soon.\
+\
+#### docker-compose.yml\
+\
+Change the path for the nginx conf mounting path to your full path, not mine!\
+\
+### Todos\
+\
+ - Write Tests\
+ - Rethink Github Save\
+ - Add Code Comments\
+ - Add Night Mode\
+\
+License\
+----\
+\
+MIT\
+\
+\
+**Free Software, Hell Yeah!**\
+\
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)\
+\
+\
+   [dill]: <https://github.com/joemccann/dillinger>\
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>\
+   [john gruber]: <http://daringfireball.net>\
+   [@thomasfuchs]: <http://twitter.com/thomasfuchs>\
+   [df1]: <http://daringfireball.net/projects/markdown/>\
+   [marked]: <https://github.com/chjj/marked>\
+   [Ace Editor]: <http://ace.ajax.org>\
+   [node.js]: <http://nodejs.org>\
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>\
+   [keymaster.js]: <https://github.com/madrobby/keymaster>\
+   [jQuery]: <http://jquery.com>\
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>\
+   [express]: <http://expressjs.com>\
+   [AngularJS]: <http://angularjs.org>\
+   [Gulp]: <http://gulpjs.com>\
+\
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>\
+   [PlGh]:  <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>\
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>\
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>\
+\
+}
