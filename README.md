@@ -28,7 +28,7 @@ Aplikacja ma przygotowany layout graficzny
 ## Backend 
   - Należy stworzyć skrypt który uwtorzy bazę danych `SQLite` oraz jej strukturtę. 
   - Należy stworzyć plik do którego będzie odwoływał się frontend który będzie wykonywał `CRUD` (create, read, update and delete) dla zadań ToDo. 
-  - Nie będzie obsługi użytkowników, oraz uwierzytenlniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania. 
+  - Nie będzie obsługi użytkowników oraz uwierzytelniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania.
   
 ## Zdanie do wykonania 
   - Na swoim koncie github zrobić `fork` poniższego repozytorium 
