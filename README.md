@@ -14,7 +14,7 @@ Aplikacja wyświetla listę zadań do wykonania. Zadania podzielone są na *wyko
   - **Opcjonalnie** można zmieniać kolejność zadań poprzez przenoszenie ich *drag & drop*
   
 ## Frontend
-Aplikacja ma przygotowany layout graficzny
+Aplikacja ma przygotowany layout graficzny.
 
 ![Layout Aplikacji](https://www.dropbox.com/s/bpah0svytmw78ie/to-do-list.png?dl=1&a) 
 
