@@ -24,7 +24,7 @@ Aplikacja ma przygotowany layout graficzny
   - Aplikacja powinna być ostylowana przez `preprocess CSS`, preferujemy `SCSS` i `compass`.  
   - Logika aplikacji powinna być podzielona według wzorca `Model-View-Controller`
   - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub użycie minimalnej ilości. Preferujemy bibliotekę `Vanilla JS`
-  - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato) w wersji Normal i Bold.
+  - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato), autorstwa [Łukasza Dziedzica](http://www.lukaszdziedzic.eu/) w wersji Normal i Bold. Prosimy o skorzystanie z wersji [Google Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Lato).
   
 ## Backend 
   - Należy stworzyć skrypt który uwtorzy bazę danych `SQLite` oraz jej strukturtę. 
