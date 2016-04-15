@@ -22,7 +22,7 @@ Aplikacja ma przygotowany layout graficzny
   - Aplikacja ma być przygotowana jak `Single Page Application`, jeden plik HTML5 wraz z jednym głównym szablonem `CSS` i jednym plikiem `JavaScript`. 
   - Komunikacja między Frontendem a Backendem ma być dokonywana w tle, bez przeładowywana strony, najlepiej z wykorzystaniem `AJAX`. 
   - Aplikacja powinna być ostylowana przez `preprocess CSS`, preferujemy `SCSS` i `compass`.  
-  - Logika aplikacji powinna być podzielona według wzorca `Model-View-Controller`
+  - Logika aplikacji powinna być podzielona według wzorca `Model-View-Controller` lub `Model-View-Whatever`.
   - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub użycie minimalnej ilości. Preferujemy bibliotekę `Vanilla JS`
   - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato), autorstwa [Łukasza Dziedzica](http://www.lukaszdziedzic.eu/) w wersji Normal i Bold. Prosimy o skorzystanie z wersji [Google Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Lato).
   
@@ -32,7 +32,7 @@ Aplikacja ma przygotowany layout graficzny
   - Nie będzie obsługi użytkowników oraz uwierzytelniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania.
   
 ## Zdanie do wykonania 
-  - Na swoim koncie github zrobić `fork` poniższego repozytorium 
+  - Na swoim koncie github zrobić `fork` poniższego repozytorium.
   - Wykonać aplikację aby po wgraniu jej do katalogu była dostępna z katalogu `to-do-list` np `http://localhost/to-do-list`.
   - `Frontend` ma być dostępny w katalogu `to-do-list/frontend` np `http://localhost/to-do-list/frontend`.
   - `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`.
