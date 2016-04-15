@@ -45,4 +45,4 @@ Aplikacja ma przygotowany layout graficzny
 
 Projekt graficzny jest przerobioną wersja [To Do List (PSD)](https://www.behance.net/gallery/10852567/To-Do-List-(PSD)) autorska [Marijan Petrovski](https://www.behance.net/psdchat).
 
-Zadanie jest rozpowszechniane na licencji [MIT](https://opensource.org/licenses/MIT)
+Zadanie jest rozpowszechniane na licencji [MIT](https://opensource.org/licenses/MIT).
