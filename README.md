@@ -27,7 +27,7 @@ Aplikacja ma przygotowany layout graficzny
   - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato), autorstwa [Łukasza Dziedzica](http://www.lukaszdziedzic.eu/) w wersji Normal i Bold. Prosimy o skorzystanie z wersji [Google Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Lato).
   
 ## Backend 
-  - Należy stworzyć skrypt który uwtorzy bazę danych `SQLite` oraz jej strukturtę. 
+  - Należy stworzyć skrypt który utworzy bazę danych `SQLite` oraz jej strukturę.
   - Należy stworzyć plik do którego będzie odwoływał się frontend który będzie wykonywał `CRUD` (create, read, update and delete) dla zadań ToDo. 
   - Nie będzie obsługi użytkowników oraz uwierzytelniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania.
   
@@ -36,7 +36,7 @@ Aplikacja ma przygotowany layout graficzny
   - Wykonać aplikację aby po wgraniu jej do katalogu była dostępna z katalogu `to-do-list` np `http://localhost/to-do-list`.
   - `Frontend` ma być dostępny w katalogu `to-do-list/frontend` np `http://localhost/to-do-list/frontend`.
   - `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`.
-  - Kod ma być **czytelny i opisany** przez komentarze, JavaScript zgodnie z [documentationjs](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md), PHP zgodnie z [phpdoc](https://www.phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html) a inne językie zgodnie z wybraną specyfikacją. 
+  - Kod ma być **czytelny i opisany** przez komentarze, JavaScript zgodnie z [documentationjs](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md), PHP zgodnie z [phpdoc](https://www.phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html) a inne języki zgodnie z wybraną specyfikacją.
   - Aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc.
   
 ## Powodzenia
