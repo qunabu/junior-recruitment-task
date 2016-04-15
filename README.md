@@ -24,6 +24,7 @@ Aplikacja ma przygotowany layout graficzny
   - Aplikacja powinna być ostylowana przez `preprocess CSS`, preferujemy `SCSS` i `compass`.  
   - Logika aplikacji powinna być podzielona według wzorca `Model-View-Controller`
   - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub użycie minimalnej ilości. Preferujemy bibliotekę `Vanilla JS`
+  - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato) w wersji Normal i Bold.
   
 ## Backend 
   - Należy stworzyć skrypt który uwtorzy bazę danych `SQLite` oraz jej strukturtę. 
@@ -39,3 +40,7 @@ Aplikacja ma przygotowany layout graficzny
   - Aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc.
   
 ## Powodzenia
+
+### Copyrights
+
+Projekt graficzny jest przerobioną wersja [To Do List (PSD)](https://www.behance.net/gallery/10852567/To-Do-List-(PSD)) autorska [Marijan Petrovski](https://www.behance.net/psdchat)
