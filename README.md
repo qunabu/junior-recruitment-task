@@ -43,4 +43,4 @@ Aplikacja ma przygotowany layout graficzny
 
 ### Copyrights
 
-Projekt graficzny jest przerobioną wersja [To Do List (PSD)](https://www.behance.net/gallery/10852567/To-Do-List-(PSD)) autorska [Marijan Petrovski](https://www.behance.net/psdchat)
+Projekt graficzny jest przerobioną wersja [To Do List (PSD)](https://www.behance.net/gallery/10852567/To-Do-List-(PSD)) autorska [Marijan Petrovski](https://www.behance.net/psdchat).
