@@ -26,18 +26,20 @@ Aplikacja ma przygotowany layout graficzny.
   - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub użycie minimalnej ilości. Preferujemy bibliotekę `Vanilla JS`
   - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato), autorstwa [Łukasza Dziedzica](http://www.lukaszdziedzic.eu/) w wersji Normal i Bold. Prosimy o skorzystanie z wersji [Google Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Lato).
   
-## Backend 
-  - Należy stworzyć skrypt który utworzy bazę danych `SQLite` oraz jej strukturę.
+## Backend (opcjonalnie)
+  - Należy stworzyć skrypt który utworzy bazę danych `SQLite` lub inną oraz jej strukturę.
   - Należy stworzyć plik do którego będzie odwoływał się frontend który będzie wykonywał `CRUD` (create, read, update and delete) dla zadań ToDo. 
   - Nie będzie obsługi użytkowników oraz uwierzytelniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania.
+  - Powyższa opcja jest opcjonalna, można skorzystać z publicznego API - np https://todo-simple-api.herokuapp.com/ (pod tym linkiem jest dokumentacja, REST Endpoint - https://todo-simple-api.herokuapp.com/todos)
   
 ## Zdanie do wykonania 
   - Na swoim koncie github zrobić `fork` poniższego repozytorium.
   - Wykonać aplikację aby po wgraniu jej do katalogu była dostępna z katalogu `to-do-list` np `http://localhost/to-do-list`.
   - `Frontend` ma być dostępny w katalogu `to-do-list/frontend` np `http://localhost/to-do-list/frontend`.
-  - `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`.
+  - *opcjonalnie* `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`. Można skorzystać z https://todo-simple-api.herokuapp.com/
   - Kod ma być **czytelny i opisany** przez komentarze, JavaScript zgodnie z [documentationjs](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md), PHP zgodnie z [phpdoc](https://www.phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html) a inne języki zgodnie z wybraną specyfikacją.
   - Aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc.
+  - Proszę o dołączenie instrukcji w jaki sposób należy uruchmić aplikację. 
   
 ## Powodzenia
 
