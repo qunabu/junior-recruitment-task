@@ -1,7 +1,7 @@
 # Zadanie dla Junior Developera
 
 Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umożliwia dodawanie, przeglądanie i oznaczanie jako wykonane różnych zadań, które zapisywane będą w bazie danych `SQLite`.
-Dla backendu proponujemy prosty skrypt w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/).
+Dla backendu możemy skorzystać z gotowego API https://todo-simple-api.herokuapp.com/ lub wykonań prosty skrypt w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/) lub NodeJS. 
 
 ## Funkcjonalność 
 Aplikacja wyświetla listę zadań do wykonania. Zadania podzielone są na *wykonane* oraz *do zrobienia*. 
@@ -39,7 +39,7 @@ Aplikacja ma przygotowany layout graficzny.
   - *opcjonalnie* `Backend` ma być dostępny w katalogu `to-do-list/backend` np `http://localhost/to-do-list/backend`. Można skorzystać z https://todo-simple-api.herokuapp.com/
   - Kod ma być **czytelny i opisany** przez komentarze, JavaScript zgodnie z [documentationjs](https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md), PHP zgodnie z [phpdoc](https://www.phpdoc.org/docs/latest/getting-started/your-first-set-of-documentation.html) a inne języki zgodnie z wybraną specyfikacją.
   - Aplikację zostawiamy w wersji developerskiej, nie minifikujemy plików, nie kompresujemy nie łączymy ich, etc.
-  - Proszę o dołączenie instrukcji w jaki sposób należy uruchmić aplikację. 
+  - Proszę o dołączenie instrukcji w jaki sposób należy uruchomić aplikację. 
   
 ## Powodzenia
 
