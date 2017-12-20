@@ -16,7 +16,7 @@ Aplikacja wyświetla listę zadań do wykonania. Zadania podzielone są na *wyko
 ## Frontend
 Aplikacja ma przygotowany layout graficzny.
 
-![Layout Aplikacji](https://www.dropbox.com/s/bpah0svytmw78ie/to-do-list.png?dl=1&a) 
+![Layout Aplikacji](https://raw.githubusercontent.com/qunabu/junior-recruitment-task/master/assets/to-do-list.png) 
 
   - W katalogu `assets` jest plik Photoshop `PSD` gotowy do pocięcia do szablonu. 
   - Aplikacja ma być przygotowana jak `Single Page Application`, jeden plik HTML5 wraz z jednym głównym szablonem `CSS` i jednym plikiem `JavaScript`. 
