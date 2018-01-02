@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>ToDo App in Vanilla JS by Artur Wojciechowski</title>
 </head>
 <body>
     <main>
         <section>
-            <header>ToDo List</header>
+            <header><div></div><span>ToDo List</span></header>
             <ul>
-                
                 <li class="task">
+                    <div class="input">
                         <input type="checkbox">
-                        <span>Make a new post about...</span>
-                        <img src="../assets/trash.png" alt="trash">
+                    </div>
+                    <span>Do wykonania</span>
+                    <img src="./img/trash.png" alt="trash">
+                </li> 
+                <li class="task done">
+                    <div class="input">
+                        <input type="checkbox" checked>
+                    </div>
+                    <span>Wykonane</span>
+                    <img src="./img/trash-done.png" alt="trash">
                 </li> 
                 <!-- List of tasks -->              
             </ul>
             
             <div class="addTask">
                 <form >
-                    <input type="submit" value="+">
+                    <div class="input">
+                        <input type="submit" value="+">
+                    </div>
                     <input type="text" placeholder="...add task">
                 </form>
             </div>
