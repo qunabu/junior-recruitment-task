@@ -17,14 +17,34 @@ function prepareTaskHTML(task){
     '<img src="../assets/trash.png" alt="trash">'
 }
 
+//funkcja przełanczająca zadanie między wykonanne/do wykonania
+function toggleTaskComplete(task){
+
+}
+
+//funkcja usuwająca zadanie
+function deleteTask(task){
+    var liToDelete = task.closest('li');
+    task.closest('ul').removeChild(liToDelete);
+}
+
 //funkcja wyświetlająca zadanie
 function showTask(task){
     var taskLi = document.createElement('li');
     taskLi.classList.add('task');
     taskLi.innerHTML = prepareTaskHTML(task);
 
-    //Events togle and delete
+    //Event toggle
+    var toggleCompleteCheckbox = taskLi.querySelector('input[type=checkbox]');
+    toggleCompleteCheckbox.addEventListener('click', function(){
+        toggleTaskComplete(this);
+    });
     
+    //Event delete
+    var deleteButton = taskLi.querySelector('img');
+    deleteButton.addEventListener('click', function(){
+        deleteTask(this);
+    });
 
     //Add task to DOM
     tasksContainer.appendChild(taskLi);
