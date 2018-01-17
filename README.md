@@ -1,7 +1,9 @@
 # Zadanie dla Junior Developera
 
-Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umożliwia dodawanie, przeglądanie i oznaczanie jako wykonane różnych zadań, które zapisywane będą w bazie danych `SQLite`.
-Dla backendu możemy skorzystać z gotowego API https://todo-simple-api.herokuapp.com/ lub wykonań prosty skrypt w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/) lub NodeJS. 
+Realizacja prostej listy ToDo (lista zadań do zrobienia) jako aplikacji internetowej, z wykorzystaniem HTML5 po stronie frontendu i dowolnej technologi po stronie backendu. Aplikacja umożliwia dodawanie, przeglądanie i oznaczanie jako wykonane różnych zadań.
+Dla backendu możemy skorzystać z gotowego API 
+
+lub *jako zadanie dodatkowe na plus* wykonanać prosty skrypt w API np w PHP (przykład http://henryranch.net/software/ease-into-sqlite-3-with-php-and-pdo/) lub NodeJS lub innej technice. 
 
 ## Funkcjonalność 
 Aplikacja wyświetla listę zadań do wykonania. Zadania podzielone są na *wykonane* oraz *do zrobienia*. 
@@ -26,11 +28,33 @@ Aplikacja ma przygotowany layout graficzny.
   - Prosimy o nie korzystanie z bibliotek JavaScriptowych lub użycie minimalnej ilości. Preferujemy bibliotekę `Vanilla JS`
   - Font z którego należy korzystać to [Lato](https://www.google.com/fonts#UsePlace:use/Collection:Lato), autorstwa [Łukasza Dziedzica](http://www.lukaszdziedzic.eu/) w wersji Normal i Bold. Prosimy o skorzystanie z wersji [Google Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Lato).
   
+## Backend gotowy 
+  - API nie ma dokumentacji ale jest napisane wg specyfikacji REST. Wszystkie zapytania i odpowiedzi są wysyłane w formacie JSON, jeżeli nie ma błedu kod odpowiedzi to 200, jeżeli jest błąd to 400 i tablica z błędami. Wszystkie rekordu są kasowane raz dziennie. 
+  - endpoint https://qunabu.com/api/todos 
+  > - GET zwraca wszystkie todos, 
+  > - POST tworzy nowy i zwraca jego ID
+  - endpoint https://qunabu.com/api/todo/ID gdzie ID to identyfikator rekordu Todo 
+  > - GET zwraca rekord
+  > - DELETE usuwa rekord 
+  > - PATCH zmienia rekord 
+  > - struktura rekordu Todo jest następująca 
+  
+```
+class Todo  {
+  static $db = array(
+    'Content'=>'Text',
+    'Finished'=>'Boolean',
+    'Sort'=>'Int'
+  );
+  static $default_sort = 'Sort';
+}
+```
 ## Backend (opcjonalnie)
   - Należy stworzyć skrypt który utworzy bazę danych `SQLite` lub inną oraz jej strukturę.
   - Należy stworzyć plik do którego będzie odwoływał się frontend który będzie wykonywał `CRUD` (create, read, update and delete) dla zadań ToDo. 
   - Nie będzie obsługi użytkowników oraz uwierzytelniania - każda osoba ma dostęp do tworzenia, czytania, aktualizacji i usuwania.
   - Powyższa opcja jest opcjonalna, można skorzystać z publicznego API - np https://todo-simple-api.herokuapp.com/ (pod tym linkiem jest dokumentacja, REST Endpoint - https://todo-simple-api.herokuapp.com/todos)
+  
   
 ## Zdanie do wykonania 
   - Na swoim koncie github zrobić `fork` poniższego repozytorium.
