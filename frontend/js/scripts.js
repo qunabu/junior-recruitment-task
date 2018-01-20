@@ -9,19 +9,18 @@ async function tasks() {
         headers: headers 
     }); 
 
-    await fetch('https://todo-simple-api.herokuapp.com/todos?page=1&page_size=10', request) 
+    await fetch('http://localhost:3000/tasks')
         .then(response => response.json())
-        .then(json=>json.data)
+        // .then(res=>console.log(res))
         .then(items=>Array.from(items.map(item=>({
-            id: item.id,
-            title: item.title,
-            isComplete: item.isComplete
+            task: item.task,
+            isdone: item.isdone
         }))))
         .then(arrayTasks=>{
             console.log(arrayTasks);
             return tasks = arrayTasks;
             })
-        .catch(error=>console.log(error)); 
+        .catch(error=>console.log(error));
     };
 
     //Variables
@@ -31,14 +30,14 @@ async function tasks() {
     //funkcja przygotowująca kod HTML zadania
     function prepareTaskHTML(task){
         // var checked = '';
-        if(task.isComplete){
+        if(task.isdone){
             var checked = 'checked';
             var imgTrash = '<img src="../assets/trash-done.png" alt="trash">';
         } else {
             var imgTrash = '<img src="../assets/trash.png" alt="trash done">';
         }
         return '<div class="input"><input type="checkbox"' + checked + '></div>' +
-        '<span>' + (task.title || task) + '</span>' +
+        '<span>' + (task.task || task) + '</span>' +
         imgTrash
     }
 
@@ -55,26 +54,43 @@ async function tasks() {
 
     //funkcja usuwająca zadanie
     function deleteTask(task){
-        console.log(task);
+        console.log('task: ' + task);
         
         var liToDelete = task.closest('li');
         // task.closest('ul').removeChild(liToDelete);
+        console.log(liToDelete);
 
-        var idTaskToDelete = liToDelete.id;
-        // console.log(idTaskToDelete);
-        fetch('https://todo-simple-api.herokuapp.com/todos/' + idTaskToDelete, {
-        method: 'DELETE'
-      })
-      .then(task.closest('ul').removeChild(liToDelete))
+        var taskToDelete = liToDelete.getElementsByTagName('span').item(0).textContent;
+        console.log(taskToDelete);
+
+        // fetch('http://localhost:3000/delete', {
+        // method: 'DELETE'
+        //   })
+        //   .then(task.closest('ul').removeChild(liToDelete))
+
+        let data = {};
+        data.delete = taskToDelete;
+
+        $.ajax({
+            type: 'POST',
+            headers: { "Content-Type": "application/json" },
+            url: 'http://localhost:3000/delete',
+            data: JSON.stringify(data),
+            success: task.closest('ul').removeChild(liToDelete),
+            error: function (err) {
+                console.log(err);
+            }
+
+        });
     }
  
     //funkcja wyświetlająca zadanie
     function showTask(task){
         console.log(task);
         var taskLi = document.createElement('li');
-        taskLi.setAttribute('id',task.id || '1');
+        // taskLi.setAttribute('id',task.id || '1');
         taskLi.classList.add('task');
-        if(task.isComplete){
+        if(task.isdone){
             taskLi.classList.add('done');
         }
 
@@ -114,23 +130,45 @@ async function tasks() {
 
             if(task){
                 
-                const headers = new Headers({ 
-                    'Content-Type': 'text/plain' 
-                }); 
-                  
-                const request = new Request({ 
-                    "title": task,
-                    "description": "description",
-                    "isComplete": false,  
-                    method: 'POST',
-                    headers: headers 
-                }); 
-                const path = 'https://todo-simple-api.herokuapp.com';
-                const parameter = ':/todos';
-            
-                fetch(path + parameter, request) 
-                    .then(response=>console.log(response))
-                    .catch(error=>console.log(error));
+                // const headers = new Headers({
+                //     'Content-Type': 'application/json'
+                // });
+                //  
+                // const request = new Request({
+                //     "task": task,
+                //     "isdone": 0,
+                //     method: 'POST',
+                //     headers: headers
+                // });
+                // const path = 'http://localhost:3000';
+                // const parameter = '/tasks';
+                //
+                // // fetch(path + parameter, request)
+                // //     .then(response=>console.log(response))
+                // //     .catch(error=>console.log(error));
+                //
+                // fetch('http://localhost:3000/tasks',{
+                //     method: 'post',
+                //     // body: 'task=nowezadanie&isdone=0'
+                //     task: JSON.stringify(task)
+                // })
+
+
+                let data = {};
+                data.task = task;
+                data.isdone = 0;
+
+                $.ajax({
+                    type: 'POST',
+                    headers: { "Content-Type": "application/json" },
+                    url: 'http://localhost:3000/tasks',
+                    data: JSON.stringify(data),
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+
+
 
                 showTask(task)
             };
