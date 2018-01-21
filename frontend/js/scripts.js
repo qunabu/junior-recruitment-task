@@ -1,13 +1,13 @@
 //funkcja tworząca tablicę zadań
 async function tasks() {
-    const headers = new Headers({ 
-        'Content-Type': 'text/plain' 
-    }); 
-      
-    const request = new Request({ 
-        method: 'GET',  
-        headers: headers 
-    }); 
+    // const headers = new Headers({
+    //     'Content-Type': 'text/plain'
+    // });
+    //  
+    // const request = new Request({
+    //     method: 'GET',
+    //     headers: headers
+    // });
 
     await fetch('http://localhost:3000/tasks')
         .then(response => response.json())
@@ -43,13 +43,65 @@ async function tasks() {
 
     //funkcja przełączająca zadanie między wykonanne/do wykonania
     function toggleTaskComplete(task){
-        // console.log(task);
-        // var inputToToggle = task.setAttribute('checked', 'checked');
+        console.log('task: ' + task);
+
+        // var liToDelete = task.closest('li');
+        // task.closest('ul').removeChild(liToDelete);
+        // console.log(liToDelete);
+
+        // var taskToDelete = liToDelete.getElementsByTagName('span').item(0).textContent;
+        // console.log(taskToDelete);
+
+
         var liToToggle = task.closest('li');
-        var imgToToggle = task.closest('img');
-        
-        liToToggle.classList.add('done');
+        var imgToToggle = liToToggle.querySelector('img');
+        var taskToToggle = liToToggle.getElementsByTagName('span').item(0).textContent;
+        console.log(taskToToggle);
+        console.log(liToToggle);
         console.log(imgToToggle);
+
+        let data = {};
+        data.update = taskToToggle;
+
+        if(liToToggle.className === "task"){
+            liToToggle.classList.add('done');
+            $(imgToToggle).attr("src", "img/trash-done.png");
+
+
+            $.ajax({
+                type: 'POST',
+                headers: { "Content-Type": "application/json" },
+                url: 'http://localhost:3000/update1',
+                data: JSON.stringify(data),
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        } else {
+            liToToggle.classList.remove('done');
+            $(imgToToggle).attr("src", "img/trash.png")
+
+            $.ajax({
+                type: 'POST',
+                headers: { "Content-Type": "application/json" },
+                url: 'http://localhost:3000/update2',
+                data: JSON.stringify(data),
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+
+        }
+
+        // liToToggle.className==="task"
+        //     ? $(imgToToggle).attr("src", "img/trash-done.png")
+        //     : $(imgToToggle).attr("src", "img/trash.png");
+        //
+        // liToToggle.className==="task"
+        //     ? liToToggle.classList.add('done')
+        //     : liToToggle.classList.remove('done');
+
     }
 
     //funkcja usuwająca zadanie
