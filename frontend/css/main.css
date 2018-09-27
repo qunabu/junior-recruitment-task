@@ -1,0 +1,150 @@
+body {
+  background-color: #e9f0f4;
+  font-family: 'Lato', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .container .to-do-app {
+    width: 300px;
+    background-color: #fff;
+    -webkit-box-shadow: 6px 9px 5px -4px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 6px 9px 5px -4px rgba(0, 0, 0, 0.12);
+    box-shadow: 6px 9px 5px -4px rgba(0, 0, 0, 0.12); }
+    .container .to-do-app .title {
+      color: #fff;
+      background-color: #2e3641;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      position: relative;
+      height: 36px;
+      background-image: url("../img/bg_header.png");
+      background-position-x: 40px;
+      background-repeat: no-repeat; }
+      .container .to-do-app .title h1 {
+        font-size: 13px;
+        color: #dae4eb;
+        margin-left: 10px; }
+      .container .to-do-app .title .box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 50px;
+        height: 100%; }
+        .container .to-do-app .title .box img {
+          height: 23px; }
+    .container .to-do-app .task {
+      border: 1px solid #e6ebed;
+      border-top: transparent;
+      padding: 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      height: 29px;
+      background-image: url("../img/bg.png");
+      background-repeat: repeat-y;
+      background-position-x: 39px; }
+      .container .to-do-app .task .finished {
+        text-decoration: line-through;
+        color: #9eb2c0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+      .container .to-do-app .task input {
+        width: 100%;
+        margin-left: 15px;
+        border: none;
+        outline: none; }
+        .container .to-do-app .task input::-webkit-input-placeholder {
+          opacity: 0.3; }
+        .container .to-do-app .task input:-ms-input-placeholder {
+          opacity: 0.3; }
+        .container .to-do-app .task input::-ms-input-placeholder {
+          opacity: 0.3; }
+        .container .to-do-app .task input::placeholder {
+          opacity: 0.3; }
+      .container .to-do-app .task .box {
+        margin: 0;
+        width: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        position: relative; }
+        .container .to-do-app .task .box .add-task p {
+          font-weight: bold;
+          color: #dae4eb;
+          cursor: pointer; }
+      .container .to-do-app .task .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 100%;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .container .to-do-app .task .content p {
+          margin: 0;
+          margin-left: 30px;
+          font-size: 13px; }
+        .container .to-do-app .task .content .finished p {
+          color: #2e3641; }
+      .container .to-do-app .task .delete {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: auto;
+        margin-right: 15px; }
+        .container .to-do-app .task .delete .finished {
+          opacity: 0.3; }
+        .container .to-do-app .task .delete img {
+          cursor: pointer; }
+  .container .error {
+    text-align: center;
+    font-size: 10px;
+    color: red;
+    display: none; }
