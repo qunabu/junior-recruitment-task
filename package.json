@@ -1,0 +1,17 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "Simple todo app",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass ./scss/app.scss ./css/app.css -w",
+    "start": "browser-sync start --server --files './css/*.css, ./*.js'"
+  },
+  "author": "Jakub Butkiewicz",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "node-sass": "^4.9.3",
+    "serve": "^10.0.2"
+  }
+}
